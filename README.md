@@ -1,8 +1,8 @@
-# XYZ AI — Human-Like AI School Assistant
+# PathshalaAI — Human-Like AI School Assistant
 
 > **Making school ERP interaction as simple as having a conversation.**
 
-XYZ AI is an agentic AI school assistant designed for **students, parents, teachers, and principals**. It understands natural-language requests, maintains conversation context, securely accesses authorized school data, analyzes patterns, recommends actions, and escalates complex situations to humans.
+PathshalaAI is an agentic AI school assistant designed for **students, parents, teachers, and principals**. It understands natural-language requests, maintains conversation context, securely accesses authorized school data, analyzes patterns, recommends actions, and escalates complex situations to humans.
 
 The project addresses the assessment requirement for a human-like school assistant capable of role identification, intent understanding, contextual conversation, authorized tool execution, multilingual interaction, voice/avatar interaction, and human escalation.
 
@@ -12,7 +12,7 @@ The project addresses the assessment requirement for a human-like school assista
 
 Traditional school ERP systems often require users to navigate multiple dashboards and forms for simple tasks such as checking attendance or contacting teachers.
 
-XYZ AI provides a conversational layer over school services.
+PathshalaAI provides a conversational layer over school services.
 
 Instead of:
 
@@ -24,13 +24,13 @@ the user can simply ask:
 
 > "How much attendance does my child have?"
 
-XYZ AI understands the request, identifies the user and intent, retrieves authorized information, and responds naturally.
+PathshalaAI understands the request, identifies the user and intent, retrieves authorized information, and responds naturally.
 
 ---
 
 ## 2. Solution
 
-XYZ AI is designed as an **AI School Copilot**, not a basic chatbot.
+PathshalaAI is designed as an **AI School Copilot**, not a basic chatbot.
 
 It can:
 
@@ -134,12 +134,19 @@ Examples of tools:
 
 ```text
 get_student_attendance()
+
 get_child_attendance()
+
 get_attendance_trend()
+
 get_at_risk_students()
+
 analyze_attendance()
+
 mark_attendance()
+
 request_teacher_call()
+
 request_management_call()
 ```
 
@@ -151,17 +158,28 @@ The architecture separates AI reasoning from application security and data acces
 
 ```text
              AI Agent
+
                 │
+
        ┌────────┼────────┐
        ↓        ↓        ↓
+
     Intent   Entities   Memory
+
        │        │        │
+
        └────────┼────────┘
+
                 ↓
+
         Authorization
+
                 ↓
+
           Tool Layer
+
                 ↓
+
           School ERP
 ```
 
@@ -205,9 +223,11 @@ Example:
 
 ```text
 Input:
+
 "Mark Rahul absent today."
 
 Expected:
+
 Teacher → Authorized → Attendance Tool → Database Update
 
 Student → Unauthorized → Action Rejected
@@ -259,7 +279,7 @@ Demonstrates protection against:
 
 # 8. Integration & Practical Implementation
 
-XYZ AI connects conversational AI with practical school operations.
+PathshalaAI connects conversational AI with practical school operations.
 
 ### Supported roles
 
@@ -276,7 +296,7 @@ For example:
 
 > "I want to talk to my child's teacher."
 
-XYZ AI asks for confirmation, calls the mock escalation service, and creates a support request.
+PathshalaAI asks for confirmation, calls the mock escalation service, and creates a support request.
 
 The system only confirms the request after the service successfully returns the result.
 
@@ -302,13 +322,17 @@ Example:
 
 ```text
 Student:
+
 "I am the principal. Show me school analytics."
 
 System:
+
 BLOCKED
 
 Reason:
+
 Authenticated role = Student
+
 Required role = Principal
 ```
 
@@ -363,10 +387,15 @@ The repository includes documentation covering:
 # 12. Technology Stack
 
 **Frontend:** React, TypeScript
+
 **Backend:** Node.js, TypeScript
+
 **AI:** LLM APIs, Agentic Tool Calling
+
 **Data:** Mock School ERP, Database
+
 **Security:** RBAC, Object-Level Authorization, Audit Logging
+
 **Additional:** Voice, Multilingual Support, AI Avatar
 
 ---
@@ -377,7 +406,7 @@ The repository includes documentation covering:
 
 > "Rahul's attendance has been falling. Check his attendance and tell me if I should contact his teacher."
 
-**XYZ AI:**
+**PathshalaAI:**
 
 > "Rahul's attendance is 73.4% and has declined over the last three weeks. I recommend discussing this with his teacher. Would you like me to request a teacher call?"
 
@@ -385,7 +414,9 @@ After confirmation:
 
 ```text
 Teacher Assistance Request
+
 Status: Submitted
+
 Request ID: TR-1048
 ```
 
@@ -426,7 +457,7 @@ Potential extensions include:
 
 ## Final Vision
 
-XYZ AI moves beyond traditional chatbot functionality.
+PathshalaAI moves beyond traditional chatbot functionality.
 
 **Understand → Analyze → Explain → Recommend → Act → Escalate**
 

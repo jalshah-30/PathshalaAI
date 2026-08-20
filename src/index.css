@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-chalk: 'Kalam', 'Caveat', cursive;
+    --font-handwriting: 'Caveat', 'Patrick Hand', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f7f5f0;
+    color: #1e293b;
+  }
+
+  .dark body {
+    background-color: #0b1120;
+    color: #f1f5f9;
+  }
+}
+
+/* Custom handwriting and chalkboard typography utilities */
+.font-chalk {
+  font-family: 'Kalam', 'Caveat', cursive, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', 'Patrick Hand', cursive, sans-serif;
+}
+
+.font-notebook {
+  font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+}
+
+/* School Campus Paper Canvas Texture */
+.school-paper-bg {
+  background-color: #faf8f5;
+  background-image: radial-gradient(#e5e1d8 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+.dark .school-paper-bg {
+  background-color: #0f172a;
+  background-image: radial-gradient(#1e293b 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+/* Cork Notice Board Texture */
+.cork-board {
+  background-color: #c89666;
+  background-image: 
+    radial-gradient(#ab7846 15%, transparent 16%),
+    radial-gradient(#b8834f 15%, transparent 16%),
+    radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  background-size: 12px 12px, 18px 18px, 6px 6px;
+  background-position: 0 0, 6px 6px, 0 0;
+  box-shadow: inset 0 0 30px rgba(78, 42, 14, 0.4);
+}
+
+.dark .cork-board {
+  background-color: #3b281c;
+  background-image: 
+    radial-gradient(#2c1c12 15%, transparent 16%),
+    radial-gradient(#342217 15%, transparent 16%),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 12px 12px, 18px 18px, 6px 6px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Wood Grain Frame */
+.wood-frame {
+  background: linear-gradient(135deg, #78350f 0%, #92400e 50%, #5c2409 100%);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.2), 
+    0 2px 4px -2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Notebook Ruled Paper Pattern */
+.notebook-ruled-paper {
+  background-color: #faf9f6;
+  background-image: 
+    linear-gradient(90deg, transparent 59px, #f43f5e 59px, #f43f5e 61px, transparent 61px),
+    linear-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 100% 100%, 100% 28px;
+  line-height: 28px;
+}
+
+.dark .notebook-ruled-paper {
+  background-color: #1e293b;
+  background-image: 
+    linear-gradient(90deg, transparent 59px, #fb7185 59px, #fb7185 61px, transparent 61px),
+    linear-gradient(#334155 1px, transparent 1px);
+  background-size: 100% 100%, 100% 28px;
+  line-height: 28px;
+}
+
+/* School Worksheet Grid Pattern */
+.worksheet-grid {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(226, 232, 240, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 232, 240, 0.8) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .worksheet-grid {
+  background-color: #0f172a;
+  background-image: 
+    linear-gradient(rgba(51, 65, 85, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 65, 85, 0.6) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Chalkboard Texture */
+.chalkboard-bg {
+  background-color: #142820;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(34, 73, 56, 0.4) 0%, rgba(10, 26, 19, 0.8) 100%),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 100% 100%, 24px 24px;
+}
+
+.chalk-text {
+  color: #f1f5f9;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.chalk-yellow {
+  color: #fef08a;
+  text-shadow: 0 0 2px rgba(253, 224, 71, 0.8);
+}
+
+.chalk-cyan {
+  color: #a5f3fc;
+  text-shadow: 0 0 2px rgba(103, 232, 249, 0.8);
+}
+
+.chalk-pink {
+  color: #fbcfe8;
+  text-shadow: 0 0 2px rgba(244, 114, 182, 0.8);
+}
+
+/* Rubber Stamp Style for Official Notices */
+.school-rubber-stamp {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #dc2626;
+  border: 2px dashed #dc2626;
+  border-radius: 4px;
+  transform: rotate(-4deg);
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.2);
+}
+
+.dark .school-rubber-stamp {
+  color: #f87171;
+  border-color: #f87171;
+}
+
+/* Holographic RFID Chip for Smart ID */
+.rfid-chip {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 40%, #fef08a 60%, #b45309 100%);
+  border: 1px solid #78350f;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Pen Writing animation */
+@keyframes penScribble {
+  0% { transform: rotate(-15deg) translate(0, 0); }
+  25% { transform: rotate(-10deg) translate(2px, -3px); }
+  50% { transform: rotate(-18deg) translate(4px, 1px); }
+  75% { transform: rotate(-12deg) translate(1px, -2px); }
+  100% { transform: rotate(-15deg) translate(0, 0); }
+}
+
+.animate-pen-writing {
+  animation: penScribble 0.6s ease-in-out infinite;
+}
+
+/* Paper Plane Flight */
+@keyframes planeFly {
+  0% { transform: translate(-40px, 30px) rotate(10deg); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translate(calc(100vw + 60px), -60px) rotate(5deg); opacity: 0; }
+}
+
+.animate-plane-fly {
+  animation: planeFly 12s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* Chalk dust particles float */
+@keyframes floatDust {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { transform: translateY(-8px) translateX(4px); opacity: 0.7; }
+}
+
+.animate-chalk-dust {
+  animation: floatDust 4s ease-in-out infinite;
+}
+
+/* Spiral Ring Binding Styling */
+.spiral-binding {
+  background: repeating-linear-gradient(
+    180deg,
+    #cbd5e1 0px,
+    #94a3b8 4px,
+    #64748b 8px,
+    #334155 12px,
+    transparent 12px,
+    transparent 28px
+  );
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Subtle animations */
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

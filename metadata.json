@@ -1,0 +1,6 @@
+{
+  "name": "Pathshala AI - School Assistant",
+  "description": "Pathshala AI: Human-like AI School Assistant with role-based authorization, school ERP tools, memory, and persona orchestration for Students, Parents, Teachers, and Principals.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

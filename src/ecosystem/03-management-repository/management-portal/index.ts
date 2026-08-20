@@ -1,0 +1,1 @@
+export { ManagementPortal } from './ManagementPortal';
